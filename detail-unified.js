@@ -1,7 +1,10 @@
 (function () {
   "use strict";
 
-  var projectKey = decodeURIComponent(location.pathname).split("/").filter(Boolean).slice(-2, -1)[0] || "";
+  var pathParts = decodeURIComponent(location.pathname).split("/").filter(Boolean);
+  var lastPart = pathParts[pathParts.length - 1] || "";
+  var projectFolder = /\.html?$/i.test(lastPart) ? (pathParts[pathParts.length - 2] || "") : lastPart;
+  var projectKey = projectFolder.replace(/^TIAN-/i, "").toLowerCase();
   var configs = {
     "detection-brand": { pending: true },
     "hangzhou-linxin": {
