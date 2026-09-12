@@ -1,0 +1,71 @@
+.stf__parent {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  transform: translateZ(0);
+
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.sft__wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stf__parent canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.stf__block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  perspective: 2000px;
+}
+
+.stf__item {
+  display: none;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.stf__outerShadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.stf__innerShadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.stf__hardShadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.stf__hardInnerShadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.st-page {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18); /* 阴影更柔和 */
+  border-radius: 6px;
+  background: 
+    url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat, /* 纸张纹理 */
+    #f5f3e7; /* 淡米色纸张底色 */
+  filter: contrast(0.97) brightness(0.98) grayscale(0.08); /* 降低反光和对比度，略微灰度 */
+  /* 可根据需要调整纹理图片和底色 */
+}
