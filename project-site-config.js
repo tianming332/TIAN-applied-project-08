@@ -4,7 +4,7 @@
   var parts = decodeURIComponent(location.pathname).split("/").filter(Boolean);
   var lastPart = parts[parts.length - 1] || "";
   var projectFolder = /\.html?$/i.test(lastPart) ? (parts[parts.length - 2] || "") : lastPart;
-  var projectId = projectFolder.replace(/^TIAN-/i, "").toLowerCase();
+  var projectId = document.body.dataset.projectId || projectFolder.replace(/^TIAN-/i, "").toLowerCase();
   var dataBase = MAIN_LIVE + "data/";
 
   function loadScript(src) {
